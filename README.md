@@ -20,7 +20,7 @@
 
 3. 使用
 
-   在需要注入的类中，使用```AutoInjection```标记，自动注册服务会通过反射自动将有此特性的类注册到DI容器中：
+   在需要注入的类中，使用```AutoInjection```标记，注册服务会通过反射将有此特性的类注册到DI容器中：
 
    ```c#
 	[AutoInjection(typeof(ITestService), InjectionType.Singleton)]
