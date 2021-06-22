@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyModel;
+﻿using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.DependencyModel;
 using OnceMi.AspNetCore.AutoInjection;
 using System;
 using System.Collections.Generic;
@@ -68,25 +69,25 @@ namespace Microsoft.Extensions.DependencyInjection
                     case InjectionType.Scoped:
                         {
                             if (item.Value.Interface == null)
-                                services.AddScoped(item.Key);
+                                services.TryAddScoped(item.Key);
                             else
-                                services.AddScoped(item.Value.Interface, item.Key);
+                                services.TryAddScoped(item.Value.Interface, item.Key);
                         }
                         break;
                     case InjectionType.Transient:
                         {
                             if (item.Value.Interface == null)
-                                services.AddTransient(item.Key);
+                                services.TryAddTransient(item.Key);
                             else
-                                services.AddTransient(item.Value.Interface, item.Key);
+                                services.TryAddTransient(item.Value.Interface, item.Key);
                         }
                         break;
                     case InjectionType.Singleton:
                         {
                             if (item.Value.Interface == null)
-                                services.AddSingleton(item.Key);
+                                services.TryAddSingleton(item.Key);
                             else
-                                services.AddSingleton(item.Value.Interface, item.Key);
+                                services.TryAddSingleton(item.Value.Interface, item.Key);
                         }
                         break;
                 }
