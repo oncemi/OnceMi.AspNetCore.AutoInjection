@@ -1,5 +1,9 @@
 # OnceMi.AspNetCore.AutoInjection
 
+**注意：本项目不再更新，此组件移动至：https://github.com/oncemi/OnceMi.Framework/tree/main/src/OnceMi.AspNetCore.AutoInjection**
+
+<hr />
+
 1. 安装
 
    通过Nuget安装：[![](https://img.shields.io/nuget/v/OnceMi.AspNetCore.AutoInjection.svg)](https://www.nuget.org/packages/OnceMi.AspNetCore.AutoInjection)
